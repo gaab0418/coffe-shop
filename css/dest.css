@@ -19,7 +19,7 @@ section.dests::before{
     left: 0;
     z-index: 1;
 
-    background-image: url('src/coffe_pattern.png');
+    background-image: url('../src/coffe_pattern.png');
     background-size: 280px;
     filter: opacity(.08);
 }
