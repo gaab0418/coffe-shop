@@ -8,7 +8,6 @@
 
         <link rel="stylesheet" href="font-awesome/css/all.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/dest.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device=width, initial-scale=1.0, maximum-scale=1.0"> 
 
@@ -29,8 +28,9 @@
                                 <li><a href="#" class="a-clear">Destaques</a></li>
                                 <li><a href="#" class="a-clear">Cardapio</a></li>
                                 <li><a href="#" class="a-clear">Contato</a></li>
-                                <li><i class="btn fa-solid fa-user"></i></li>
+                                <li><i id="btn-side-menu-profile" class="btn fa-solid fa-user"></i></li>
                             </ul>
+                            
                         </div>
                         <i class="fa-solid fa-bars mobile-nav-bar">
                             <ul>
@@ -44,98 +44,183 @@
                         </i>
                     </div>
                 </nav>
-                <section>
-                    <div class="header-sub-sec">
-                        <h1>Lorem Ipsum</h1>
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet enim et sapien molestie.</h2>
-                    </div>
-                </section>
+                <div class="side-menu">
+                    <ul>
+                        <li><a href="#" class="a-clear">Meus Pedidos</a></li>
+                        <li><a href="#" class="a-clear">Carrinho</a></li>
+                        <li><a href="#" class="a-clear">Cupons</a></li>
+                        <li><div class="line"></div></li>
+                        <li><a href="#" class="a-clear">Favoritos</a></li>
+                        <li><a href="#" class="a-clear">Notificações</a></li>
+                        <li><div class="line"></div></li>
+                        <li><a href="#" class="a-clear">Meu perfil</a></li>
+                        <li><a href="#" class="a-clear">Configurações</a></li>
+                    </ul>
+        
+                </div>
+                <div class="header-sub-sec">
+                    <h1>Lorem Ipsum</h1>
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet enim et sapien molestie.</h2>
+                </div>
             </div>
         </header>
 
-        <section class="dests">
-            <div class="container">
-                <h1>Lorem Ipsum</h1>
+        
 
-                <div class="wrapper-dests">
+    
+        <div class="filter-pattern">
+            <section class="dests">
+                <div class="container">
+                    <h1 class="title-call">Destaques Da Semana</h1>
 
-                    <!-- ideia  Fazer eles quadrados, igual a merda 
-                    do site do estudante online com aquelas flex prontas
-                    pra adicionar mais cosias-->
-                    
-                    <div class="dest-gp">
-                        <img src="src/default-dest-img.png" alt="destção 1" class="dest-img">
-                        <div class="dest-info">
-                            <p class="dest-info-desc">Descrição:</p>
-                            <ul id="dest-info">
-                                <!-- javascript moment -->
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                            </ul>
+                    <div class="wrapper-dests">
+
+                        <!-- ideia  Fazer eles quadrados, igual a merda 
+                        do site do estudante online com aquelas flex prontas
+                        pra adicionar mais cosias-->
+                        
+                        <div class="dest-gp">
+                            <img src="src/default-dest-img.png" alt="destção 1" class="dest-img">
+                            <div class="dest-info">
+                                <p class="dest-info-desc">Descrição:</p>
+                                <ul id="dest-info">
+                                    <!-- javascript moment -->
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                </ul>
+                            </div>
+                            <div class="dest-opts">
+                                <i class="btn fa-solid fa-basket-shopping"></i>
+                                <i class="btn fa-solid fa-heart"></i>
+                                <!-- <i class="btn fa-regular fa-heart"></i> -->
+                                <i class="btn fa-solid fa-share"></i>
+                                <!-- <i class="btn fa-regular fa-share-from-square"></i> -->
+                            </div>
                         </div>
-                        <div class="dest-opts">
-                            <i class="btn fa-solid fa-basket-shopping"></i>
-                            <i class="btn fa-solid fa-heart"></i>
-                            <!-- <i class="btn fa-regular fa-heart"></i> -->
-                            <i class="btn fa-solid fa-share-from-square"></i>
-                            <!-- <i class="btn fa-regular fa-share-from-square"></i> -->
+                        <div class="dest-gp">
+                            <img src="src/default-dest-img.png" alt="destção 1" class="dest-img">
+                            <div class="dest-info">
+                                <p class="dest-info-desc">Descrição:</p>
+                                <ul id="dest-info">
+                                    <!-- javascript moment -->
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                </ul>
+                            </div>
+                            <div class="dest-opts">
+                                <i class="btn fa-solid fa-basket-shopping"></i>
+                                <i class="btn fa-solid fa-heart"></i>
+                                <!-- <i class="btn fa-regular fa-heart"></i> -->
+                                <i class="btn fa-solid fa-share"></i>
+                                <!-- <i class="btn fa-regular fa-share-from-square"></i> -->
+                            </div>
                         </div>
+                        <div class="dest-gp">
+                            <img src="src/default-dest-img.png" alt="destção 1" class="dest-img">
+                            <div class="dest-info">
+                                <p class="dest-info-desc">Descrição:</p>
+                                <ul id="dest-info">
+                                    <!-- javascript moment -->
+                                    <li>Lorem</li>
+                                    <li>Lorem</li>
+                                    <li>Lorem</li>
+                                    <li>Lorem</li>
+                                    <li>Lorem</li>
+                                </ul>
+                            </div>
+                            <div class="dest-opts">
+                                <i class="btn fa-solid fa-basket-shopping"></i>
+                                <i class="btn fa-solid fa-heart"></i>
+                                <!-- <i class="btn fa-regular fa-heart"></i> -->
+                                <i class="btn fa-solid fa-share"></i>
+                                <!-- <i class="btn fa-regular fa-share-from-square"></i> -->
+                            </div>
+                        </div>
+
+
+                        
                     </div>
-                    <div class="dest-gp">
-                        <img src="src/default-dest-img.png" alt="destção 1" class="dest-img">
-                        <div class="dest-info">
-                            <p class="dest-info-desc">Descrição:</p>
-                            <ul id="dest-info">
-                                <!-- javascript moment -->
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                            </ul>
-                        </div>
-                        <div class="dest-opts">
-                            <i class="btn fa-solid fa-basket-shopping"></i>
-                            <i class="btn fa-solid fa-heart"></i>
-                            <!-- <i class="btn fa-regular fa-heart"></i> -->
-                            <i class="btn fa-solid fa-share-from-square"></i>
-                            <!-- <i class="btn fa-regular fa-share-from-square"></i> -->
-                        </div>
-                    </div>
-                    <div class="dest-gp">
-                        <img src="src/default-dest-img.png" alt="destção 1" class="dest-img">
-                        <div class="dest-info">
-                            <p class="dest-info-desc">Descrição:</p>
-                            <ul id="dest-info">
-                                <!-- javascript moment -->
-                                <li>Lorem</li>
-                                <li>Lorem</li>
-                                <li>Lorem</li>
-                                <li>Lorem</li>
-                                <li>Lorem</li>
-                            </ul>
-                        </div>
-                        <div class="dest-opts">
-                            <i class="btn fa-solid fa-basket-shopping"></i>
-                            <i class="btn fa-solid fa-heart"></i>
-                            <!-- <i class="btn fa-regular fa-heart"></i> -->
-                            <i class="btn fa-solid fa-share-from-square"></i>
-                            <!-- <i class="btn fa-regular fa-share-from-square"></i> -->
-                        </div>
-                    </div>
-
-
-                    
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="cardapio">
+            <section class="cardapio">
+                <div class="container">
+                    <h1 class="title-call">Cardapio</h1>
+                    <div class="group-cardapio">
+    <!-- Filtros -->
+                        <div class="side-filtros-cardapio">
+                            <h3 class="filters-title-G">Filtros</h3>
+                            <div class="line"></div>
 
-        </section>
+                            <h3 class="filters-title-M">Preço</h3>
+                            <div class="filter-price-box">
+                                <div class="col">
+                                    <span>Minimo</span>
+                                    <input type="number" class="inpt-price" id="inpt-price-min" placeholder="R$" min="0" max="100">
+                                </div>
+                                <div class="col">
+                                    <span>Maximo</span>
+                                    <input type="number" class="inpt-price" id="inpt-price-max" placeholder="R$" min="0" max="100">
+                                </div>
+                            </div>
 
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+                            <div class="line"></div>
+                            <h3 class="filters-title-M">Produto</h3>
+
+                                <div class="produtos-list style-flex-filters">
+                                    <input type="checkbox" id="testeProduto">
+                                    <label for="testeProduto" class="style-labels-filters">Produto 1</label>
+                                    <input type="checkbox" id="testeProduto2">
+                                    <label for="testeProduto2" class="style-labels-filters">Produto 2</label>
+                                    <input type="checkbox" id="testeProduto3">
+                                    <label for="testeProduto3" class="style-labels-filters">Produto 3</label>
+                                    <input type="checkbox" id="testeProduto4">
+                                    <label for="testeProduto4" class="style-labels-filters">Produto 4</label>
+                                </div>
+                            <div class="line"></div>
+
+
+                            <h3 class="filters-title-M">Outros</h3>
+
+                            <div class="outros-filter style-flex-filters">
+
+                                <input type="checkbox" id="frete-check">
+                                <label for="frete-check" class="style-labels-filters">Frete Grátis</label>
+
+                                <input type="checkbox" id="promocao">
+                                <label for="promocao" class="style-labels-filters">Em Promoção</label>
+
+                            </div>
+                        </div>
+
+                        <div class="cardapio-wrapper">
+
+        <!-- Box Item A Venda -->
+                            <div class="cardapio-item">
+                                ...
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="about">
+                <div class="container">
+                    <h1 class="title-call">Sobre nós</h1>
+                </div>
+            </section>
+
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="scripts/scripts.js"></script>
     </body>
 </html>
