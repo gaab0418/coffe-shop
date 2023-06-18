@@ -16,6 +16,7 @@
     --white-bg-color: #fff;
     --btn-color: #709775;
     --btn-color-hv: #537a5a;
+    --bg-color-sec: #333f5a; 
 }
 
 html,body{
@@ -443,6 +444,25 @@ header .btn:hover{
 */
 
 
+.about-sec{
+    position:relative;
+    color: var(--color-text-pri);
+}
+.about-sec h1{
+    color: var(--color-text);
+}
+
+
+.about-sec::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 128px);
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--bg-color-sec);
+}
 
 .about-wrapper{
     display: flex;
@@ -450,29 +470,67 @@ header .btn:hover{
 
 .about{
     width: 50%;
-
-    background-color: blue;
+    padding: 30px;
+    padding-left: 0;
 }
-
+.about h2{
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.about p{
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 1.5em;
+}
 
 .comentarios{
     width: 50%;
-    background-color: red;
+    border: 30px solid var(--bg-color-sec);
+}
+.comentarios-wrapper{
+    overflow: hidden;
 }
 
-.coment-wrapper{
+
+.coment-gp{
+    float: left;
+}
+.header-coment{
     display: flex;
-
+    align-items: center;
+}
+.header-coment img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.body-coment{
+    margin-top: 15px;
+    max-height: 95px;
     overflow: auto;
-    max-height: 150px;
+}
+.body-coment span{
+    font-size: 16px;
+    font-weight: lighter;
 }
 
-
-
-
-
-
-
+.comentarios .bullets-slide{
+    margin-top: 20px;
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+}
+.comentarios .bullets-slide span{
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--white-bg-color);
+}
+.comentarios .bullets-slide span.clicked{
+    background-color: #8b8b8b;
+}
 
 
 
@@ -518,11 +576,20 @@ header .btn:hover{
         margin-left: 20px;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
     .desktop-nav-bar,.side-menu{
         display: none;
     }
     .mobile-nav-bar{
         display: flex;
     }
+
+
+
+
+    .about-wrapper{
+        flex-direction: column;
+    }
+    .about{width: 100%;padding-right: 0;text-align: center;}
+    .comentarios{width: 100%;padding-left: 0;}
 }
