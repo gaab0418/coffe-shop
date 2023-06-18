@@ -41,7 +41,7 @@ body{
 
 .container{
     width: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
@@ -131,7 +131,6 @@ header > .container > nav{
     display: flex; 
     align-items: center;
 }  
-
 
 .nav-bar ul{
     list-style-type: none;
@@ -438,6 +437,37 @@ header .btn:hover{
 
 
 
+/* --======================================================-- 
+                            Sobre nós
+   --======================================================--
+*/
+
+
+
+.about-wrapper{
+    display: flex;
+}
+
+.about{
+    width: 50%;
+
+    background-color: blue;
+}
+
+
+.comentarios{
+    width: 50%;
+    background-color: red;
+}
+
+.coment-wrapper{
+    display: flex;
+
+    overflow: auto;
+    max-height: 150px;
+}
+
+
 
 
 
@@ -483,40 +513,6 @@ header .btn:hover{
         font-size: 20px;
     }
 }
-/* @media screen and (max-width: 550px) {
-    .dest-gp{
-        flex-direction: column;
-        align-items: center;
-    }
-    .dest-info{
-        border: none;
-        border-top: 1px solid black;
-        text-align: center;
-        padding: 0;
-    }
-    .dest-info ul{
-        justify-content: center;
-    }
-    .dest-gp img{
-        width: 100px;
-        height: 120px;
-        padding: 0 0 20px 0;
-    }
-    .dest-opts{
-        flex-direction: row;
-        padding: 10px 0 0 0 ;
-        align-items: center;
-        justify-content: center;
-    }
-}
-@media screen and (max-width: 180px){
-    .wrapper-dests > .dest-gp{
-        padding: 5px;
-    }
-    section.dests{
-        padding: 0;
-    }
-} */
 @media screen and (max-width: 830px) {
     .desktop-nav-bar ul li{
         margin-left: 20px;
