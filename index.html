@@ -5,6 +5,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="font-awesome/css/all.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -147,42 +150,49 @@
                 <div class="container">
                     <h1 class="title-call">Cardapio</h1>
                     <div class="group-cardapio">
-    <!-- Filtros -->
-                        <div class="side-filtros-cardapio">
+                        <!-- Filters -->
+                        <div class="side-filtros-cardapio ">
                             <h3 class="filters-title-G">Filtros</h3>
-                            <div class="line"></div>
 
-                            <h3 class="filters-title-M">Preço</h3>
-                            <div class="filter-price-box">
-                                <div class="col">
-                                    <span>Minimo</span>
-                                    <input type="number" class="inpt-price" id="inpt-price-min" placeholder="R$" min="0" max="100">
-                                </div>
-                                <div class="col">
-                                    <span>Maximo</span>
-                                    <input type="number" class="inpt-price" id="inpt-price-max" placeholder="R$" min="0" max="100">
+                            <div class="line"></div>
+                            <div class="f-preco">
+                                <h3 class="filters-title-M">Preço</h3>
+                                <div class="filter-price-box">
+                                    <div class="col">
+                                        <span>Minimo</span>
+                                        <input type="number" class="inpt-price" id="inpt-price-min" placeholder="R$" min="0" max="100">
+                                    </div>
+                                    <div class="col">
+                                        <span>Maximo</span>
+                                        <input type="number" class="inpt-price" id="inpt-price-max" placeholder="R$" min="0" max="100">
+                                    </div>
                                 </div>
                             </div>
 
-
                             <div class="line"></div>
+                            <div class="f-produto">
                             <h3 class="filters-title-M">Produto</h3>
 
-                                <div class="produtos-list style-flex-filters">
-                                    <input type="checkbox" id="testeProduto">
-                                    <label for="testeProduto" class="style-labels-filters">Produto 1</label>
-                                    <input type="checkbox" id="testeProduto2">
-                                    <label for="testeProduto2" class="style-labels-filters">Produto 2</label>
-                                    <input type="checkbox" id="testeProduto3">
-                                    <label for="testeProduto3" class="style-labels-filters">Produto 3</label>
-                                    <input type="checkbox" id="testeProduto4">
-                                    <label for="testeProduto4" class="style-labels-filters">Produto 4</label>
-                                </div>
+                            <div class="dropdown-pd-list">
+                                <input type="checkbox" id="check-dropdown">
+                                <label class="btn" for="check-dropdown">Selecionar<i class="fa-solid fa-caret-down"></i></label>
+                            </div>
+
+
+                            <div class="produtos-list style-flex-filters">
+                                    <!-- Javascript -->
+                                <input type="checkbox" id="testeProduto">
+                                <label for="testeProduto" class="style-labels-filters">Produto 1</label>
+                                <input type="checkbox" id="testeProduto2">
+                                <label for="testeProduto2" class="style-labels-filters">Produto 2</label>
+                                <input type="checkbox" id="testeProduto3">
+                                <label for="testeProduto3" class="style-labels-filters">Produto 3</label>
+                            </div>
+                        </div>
+                        
                             <div class="line"></div>
-
-
+                            <div class="f-outros">
                             <h3 class="filters-title-M">Outros</h3>
-
                             <div class="outros-filter style-flex-filters">
 
                                 <input type="checkbox" id="frete-check">
@@ -194,13 +204,15 @@
                             </div>
                         </div>
 
+                        </div>
+
                         <div class="cardapio-wrapper">
-
-        <!-- Box Item A Venda -->
-                            <div class="cardapio-item">
-                                ...
+                            
+                            <div class="cardapio-nav">
+                                <i class="btn fa-solid fa-arrow-left"></i>
+                                <p>Página <span>1</span> de <span>1</span></p>
+                                <i class="btn fa-solid fa-arrow-right"></i>
                             </div>
-
                         </div>
 
                     </div>

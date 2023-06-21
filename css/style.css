@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Bitter', serif;
-    /* font-family: 'Bitter', serif;
-    300-600
-    light-regular-med-semib*/
 }
 
 :root{
@@ -14,7 +11,7 @@
     --bg-color: #fff2de ;
     --dest-bg-color: #ffebcd;
     --white-bg-color: #fff;
-    --btn-color: #709775;
+    --btn-color: #73503C;
     --btn-color-hv: #537a5a;
     --bg-color-sec: #333f5a; 
 }
@@ -25,6 +22,13 @@ html,body{
 body{
     position: relative;
 }
+.selection-off,.btn{
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
 .a-clear{
     text-decoration: none;
@@ -35,7 +39,7 @@ body{
     border-top: 1px #414042 solid;
 }
 .title-call{
-    padding: 50px 0;
+    padding: 80px 0;
     text-transform: uppercase;
     text-align: center;
 }
@@ -89,6 +93,11 @@ section{
     background-color: var(--bg-color);
 }
 
+
+.cardapio-nav p,.about p,.body-coment span,.dest-info li,.col span,.style-labels-filters,.card-name,.card-description,.card-price,.card-body .buttons h2{
+    font-family: 'Lato', sans-serif;
+}
+
 /* --======================================================-- 
                             Header
    --======================================================--
@@ -99,6 +108,7 @@ header{
     background-image: url('../src/bg.jpg');
     background-size: cover;
     background-position: center 50%;
+    background-color: #73503C;
 
     height: calc(100% - 30px);
     padding: 20px 6%;
@@ -252,10 +262,8 @@ header .btn:hover{
     border-radius: 30px;
     margin: 25px;
     position: relative;
-    /* border: 1px solid #d1bc9b; */
     background-color: var(--dest-bg-color);
     border-radius: 20px;
-    /* background: #ffebcd; */
     box-shadow:  8px 8px 43px #deccb2,
                  -8px -8px 43px #ffffe8;
 }
@@ -362,6 +370,11 @@ header .btn:hover{
 
 .cardapio-wrapper{
     width: 85%;
+    padding-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
 }
 
 .side-filtros-cardapio{
@@ -398,15 +411,38 @@ header .btn:hover{
     flex-direction: column;
     align-items: center;
 }
+.dropdown-pd-list input{display: none;}
+.dropdown-pd-list label{
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+.dropdown-pd-list label i{
+    margin-left: 7px;
+}
+.dropdown-pd-list{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.produtos-list{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+    box-sizing: content-box;
+    padding: 13px;
+    gap: 7px;
+    background-color: var(--white-bg-color);
+    border-radius: 7px;
+}
+
 
 .produtos-list input[type=checkbox]{
     display: none;
 }
-.produtos-list{
-    flex-wrap: wrap;
-    justify-content: center;
-}
-    
 .produtos-list label{
     padding: 5px 7px;
 }
@@ -425,24 +461,112 @@ header .btn:hover{
 }
 
 .outros-filter label{
-    padding: 8px;
+    padding: 3px 8px;
 }
 
 .outros-filter input:checked + label{
     /* background-color: var(--btn-color-hv); */
-    background-color: red;
-    box-shadow: 0 0 10px red inset;
+    background-color: var(--btn-color-hv);
+    box-shadow: 0 0 10px #696969 inset;
+}
+
+.cardapio-item{
+    background-color: var(--dest-bg-color);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+.cardapio-item:hover{
+    transform: scale(101%);
+    box-shadow: 0 0 6px #ccc;
+}
+
+.card-header{
+    background-image: url("../src/produto-1.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0 0;
+    background-color: #ccc;
+    width: 100%;
+    height: 160px;
+}
+
+.card-body{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.card-name{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.card-description{
+    line-height: 1.5em;
+    font-size: 14px;
+}
+
+.card-price{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.card-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+}
+
+.card-buttons h2{
+    border-radius: 5px;
+    padding: 5px 10px;
+    flex-grow: 1;
+}
+.card-buttons i{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
 }
 
 
+.cardapio{
+    padding-bottom: 60px;
+}
 
+.cardapio-nav{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: -50px;
+    right: 0;
+}
 
+.cardapio-nav i{
+    width:  23px;
+    height: 23px;
 
+    cursor: pointer;
+
+}
+
+.cardapio-nav p{
+    margin: 0 10px;
+}
+.cardapio-nav p span{
+    font-weight: bold;
+}
+.cardapio-nav p span:last-child{
+    text-decoration: underline;
+}
 /* --======================================================-- 
                             Sobre nós
    --======================================================--
 */
-
 
 .about-sec{
     position:relative;
@@ -452,12 +576,11 @@ header .btn:hover{
     color: var(--color-text);
 }
 
-
 .about-sec::before{
     content: '';
     position: absolute;
     width: 100%;
-    height: calc(100% - 128px);
+    height: calc(100% - 188px);
     left: 0;
     bottom: 0;
     z-index: 1;
@@ -549,20 +672,6 @@ header .btn:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 360px) {
     .header-sub-sec h1{
         font-size: 30px;
@@ -592,4 +701,36 @@ header .btn:hover{
     }
     .about{width: 100%;padding-right: 0;text-align: center;}
     .comentarios{width: 100%;padding-left: 0;}
+
+
+
+
+    .group-cardapio{
+        flex-direction: column;
+        align-items: center;
+    }
+    .side-filtros-cardapio{
+        flex-direction: row;
+        border-right: 0;
+        border-bottom: 1px solid black;
+        padding: 0;
+        padding-bottom: 15px;        
+        width: auto;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .side-filtros-cardapio .line{display: none;}
+    .f-preco,.f-produto,.f-outros{
+        display: flex;
+        flex-direction: column;
+    }
+    .style-flex-filters{
+        flex-wrap: wrap;
+    }
+
+    .cardapio-wrapper{
+        padding: 20px 0;
+        gap: 10px;
+        justify-content: center;
+    }
 }

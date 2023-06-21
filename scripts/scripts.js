@@ -6,6 +6,8 @@ window.onload = function(){
     var comentsLenght = $('.coment-wrapper .coment-gp').length
     var curIndex = 0
     var delay = 4500
+    const dropdownProds = $('.produtos-list')
+    const dropdownProdsIcon = $('.dropdown-pd-list label i')
 
 
 
@@ -19,6 +21,26 @@ window.onload = function(){
             btnClick = 0
         }
     })
+    $('#check-dropdown').click(function(){
+        let el = $(this).is(':checked')
+        if(el == true){
+            dropdownProds.css('display','flex')
+            dpChangeClass(1)
+        }else{
+            dropdownProds.css('display','none')
+            dpChangeClass(2)
+        }
+    })
+    function dpChangeClass(f){
+        if(f == 1){
+            dropdownProdsIcon.removeClass('fa-caret-down')
+            dropdownProdsIcon.addClass('fa-caret-up')
+        }else if(f == 2){
+            dropdownProdsIcon.removeClass('fa-caret-up')
+            dropdownProdsIcon.addClass('fa-caret-down')
+        }
+    }
+
     
 
     /*
@@ -49,6 +71,11 @@ window.onload = function(){
     */
 
     initSlider()
+    autoPlay()
+    navgateToSlide()
+
+    addItemsCardapio()
+
     function initSlider(){
         $('.coment-wrapper').css('width',100*comentsLenght+'%')
         $('.coment-gp').css('width',100/comentsLenght+'%')
@@ -59,20 +86,13 @@ window.onload = function(){
                 $('.bullets-slide').append('<span></span>')
         }
     }
-
-    autoPlay()
-    navgateToSlide()
-
-    
     function navgateToSlide(){
         $('.bullets-slide span').click(function(){
             let index = $(this).index()
             goToSlider(curIndex = index)
-            $('.comentarios-wrapper').stop()
         })
 
     }
-
     function autoPlay(){
         setInterval(function() {
             curIndex++
@@ -82,7 +102,6 @@ window.onload = function(){
         }, delay);
 
     }
-
     function goToSlider(ind){
         var offSetX = $('.coment-gp').eq(ind).offset().left - $('.coment-wrapper').offset().left
         // console.log(ind, '', offSetX, '',a,b)
@@ -91,5 +110,33 @@ window.onload = function(){
         $('.comentarios-wrapper').animate({'scrollLeft':offSetX}, 600)
     }
 
+        
 
+
+    function addItemsCardapio(){
+        var n = 'Item Name'
+        var d = 'Simple Description Simple Description Simple Description'
+
+        for(let i = 0;i < 8;i++){
+            var p = Math.floor(Math.random() * 999) + 1
+            const newItem =  `
+            <div class="cardapio-item"> 
+                <div class="card-header"></div> 
+                <div class="card-body"> 
+                    <h2 class="card-name">${n}</h2> 
+                    <p class="card-description">${d}</p> 
+                    <h2 class="card-price">R$<span>${p}</span></h2> 
+                    <div class="card-buttons"> 
+                        <h2 class="btn">Comprar</h2> 
+                        <i class="btn fa-solid fa-basket-shopping"></i> 
+                        <i class="btn fa-solid fa-heart"></i> 
+                    </div> 
+                </div> 
+            </div>`
+        
+            $('.cardapio-wrapper').append(newItem)
+        }
+    }
+    
+    
 }
