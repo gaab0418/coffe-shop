@@ -411,6 +411,10 @@ header .btn:hover{
     flex-direction: column;
     align-items: center;
 }
+
+/* .f-produto{
+    position: relative;
+} */
 .dropdown-pd-list input{display: none;}
 .dropdown-pd-list label{
     padding: 3px 8px;
@@ -431,6 +435,10 @@ header .btn:hover{
     display: none;
     position: absolute;
     z-index: 1;
+    min-width: 100px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
 
     box-sizing: content-box;
     padding: 13px;
@@ -669,7 +677,11 @@ header .btn:hover{
 
 
 
-
+/* @media screen and (max-width: 425px) {
+    .produtos-list{
+        top: 80px;
+    }
+} */
 
 
 @media screen and (max-width: 360px) {
@@ -692,7 +704,6 @@ header .btn:hover{
     .mobile-nav-bar{
         display: flex;
     }
-
 
 
 
