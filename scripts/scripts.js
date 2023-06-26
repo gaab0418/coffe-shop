@@ -10,9 +10,11 @@ window.onload = function(){
     const dropdownProdsIcon = $('.dropdown-pd-list label i')
 
 
+    $('a,input[type=submit]').click(() => {
+        return false
+    })
 
-
-    $('#btn-side-menu-profile.fa-user').click(function(){
+    $('#btn-side-menu-profile.fa-user').click(() => {
         if(btnClick == 0){
             $('.side-menu').hide()
             btnClick = 1
@@ -21,7 +23,7 @@ window.onload = function(){
             btnClick = 0
         }
     })
-    $('#check-dropdown').click(function(){
+    $('#check-dropdown').click(() => {
         let el = $(this).is(':checked')
         if(el == true){
             dropdownProds.css('display','flex')
