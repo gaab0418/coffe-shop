@@ -62,6 +62,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: var(--btn-color);
+    color: #171618;
     border-radius: 50%;
     transition: background .2s;
     cursor: pointer;
@@ -171,10 +172,7 @@ header > .container > nav{
     color: var(--color-text-pri);
     font-size: 34px;
     cursor: pointer;
-}
-.mobile-nav-bar ul{
-    font-size: initial;
-    display: none;
+    /* position: relative; */
 }
 
 .header-sub-sec{
@@ -229,13 +227,13 @@ header .btn:hover{
     background-color: var(--white-bg-color);
 }
 
-.side-menu ul{
+.ul-style-menu{
     display: flex;
     flex-direction: column;
     list-style-type: none;
 }
 
-.side-menu ul li:not(:first-child){
+.li-style-menu:not(:first-child){
     margin-top: 15px;
 }
 
@@ -889,6 +887,27 @@ footer div.logo{
 }
 
 
+.ul-style-menu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.li-style-menu{
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    margin-top: 0 !important;
+}
+.menu-mobile{
+    position: absolute;
+    z-index: 5;
+    top: 85px;
+    right: 0;
+    padding: 20px;
+    border-radius: 7px;
+    background-color: var(--white-bg-color);
+}
 
 
 

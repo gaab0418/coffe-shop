@@ -2,12 +2,29 @@
 
 
 window.onload = function(){
-    var btnClick = 1    
+    var btnClick = 1  
+    var btnClick2 = 1  
     var comentsLenght = $('.coment-wrapper .coment-gp').length
     var curIndex = 0
     var delay = 4500
     const dropdownProds = $('.produtos-list')
     const dropdownProdsIcon = $('.dropdown-pd-list label i')
+    
+    $('.menu-mobile,.side-menu').hide()
+
+    window.onresize = function(){
+        if($(window).width() <= 800 && $(window).width() >= 700){
+            $('.menu-mobile,.side-menu').hide()
+        }
+    }
+    
+
+    goto()
+    function goto(){
+        $()
+    }   
+
+
 
 
     $('a,input[type=submit]').click(() => {
@@ -21,6 +38,15 @@ window.onload = function(){
         }else if(btnClick == 1){
             $('.side-menu').show()
             btnClick = 0
+        }
+    })
+    $('.mobile-nav-bar').click(() => {
+        if(btnClick2 == 0){
+            $('.menu-mobile').hide()
+            btnClick2 = 1
+        }else if(btnClick2 == 1){
+            $('.menu-mobile').show()
+            btnClick2 = 0
         }
     })
 
