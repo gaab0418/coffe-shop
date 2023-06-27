@@ -901,6 +901,7 @@ footer div.logo{
 }
 .menu-mobile{
     position: absolute;
+    display: none;
     z-index: 5;
     top: 85px;
     right: 0;

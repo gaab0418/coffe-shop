@@ -19,10 +19,15 @@ window.onload = function(){
     }
     
 
-    goto()
-    function goto(){
-        $()
-    }   
+    
+        $('li a').click(function(){
+            var href = $(this).attr('href')
+            var oftp = $(href).offset().top
+
+            $('html,body').animate({'scrollTop':oftp})
+        })
+            
+
 
 
 
