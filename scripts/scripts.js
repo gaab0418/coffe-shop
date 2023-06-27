@@ -23,8 +23,10 @@ window.onload = function(){
             btnClick = 0
         }
     })
-    $('#check-dropdown').click(() => {
-        let el = $(this).is(':checked')
+
+    $('.lb-dp').click(() => {
+        var el = $('.lb-dp').is(':checked')
+        // console.log(el)
         if(el == true){
             dropdownProds.css('display','flex')
             dpChangeClass(1)
